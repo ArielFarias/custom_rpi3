@@ -34,8 +34,8 @@ defmodule CustomRpi3.MixProject do
   defp nerves_package do
     [
       type: :system,
-      artifact_url: [
-        " https://github.com/ArielFarias/custom_rpi3/releases/download/v1.6.3/custom_rpi3-portable-1.6.3.tar.gz"
+      artifact_sites: [
+        {:github_releases, "ArielFarias/#{@app}"},
       ],
       build_runner_opts: build_runner_opts(),
       platform: Nerves.System.BR,
